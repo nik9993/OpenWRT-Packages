@@ -26,7 +26,7 @@ endef
 
 define Package/$(PKG_NAME)/install
 	#make nimbus folder
-	$(INSTALL_DIR) $(1)/usr/lib/nimbus/lib.sh
+	$(INSTALL_DIR) $(1)/usr/lib/nimbus/
 	#install binary
 	$(INSTALL_BIN) $(PKG_BUILD_DIR) $(1)/usr/lib/nimbus/
 endef
