@@ -17,12 +17,11 @@ define Package/$(PKG_NAME)
 	SECTION:=Nimbus-One
 	CATEGORY:=Utilities
 	TITLE:=RPCD tools for Nimbus One
-	DEPENDS:=+rpcd
+	DEPENDS:=+rpcd +nimbus-utils
 endef
 
 define Package/$(PKG_NAME)/description
-Nimbus One rpcd module:q
-
+Nimbus One rpcd module
 endef
 
 define Package/$(PKG_NAME)/install
