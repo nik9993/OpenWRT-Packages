@@ -28,7 +28,7 @@ define Package/$(PKG_NAME)/install
 	#make nimbus folder
 	$(INSTALL_DIR) $(1)/usr/lib/nimbus/
 	#install binary
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/nimbus/* $(1)/usr/lib/nimbus/.
+	$(INSTALL_BIN) $(PKG_BUILD_DIR) $(1)/usr/lib/nimbus/.
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
