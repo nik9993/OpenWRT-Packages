@@ -1,2 +1,2 @@
 # OpenWRT-Packages
-Repository that contains make files for OpenWRT Packages
+Repository that contains Makefiles for OpenWRT Packages
