@@ -17,7 +17,7 @@ define Package/$(PKG_NAME)
 	SECTION:=Nimbus-One
 	CATEGORY:=Utilities
 	TITLE:=Nimbus-One Utilities
-	DEPENDS:=+libubox
+	DEPENDS:=+libubox +libubus
 endef
 
 define Package/$(PKG_NAME)/install
