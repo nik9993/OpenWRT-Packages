@@ -14,7 +14,7 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 include $(INCLUDE_DIR)/package.mk
 
 define Package/$(PKG_NAME)
-	SECTION:=Nimbus-One
+	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=RPCD tools for Nimbus One
 	DEPENDS:=+rpcd +nimbus-utils
