@@ -20,7 +20,7 @@ define Package/$(PKG_NAME)
 	DEPENDS:=+libubox +libubus
 endef
 
-define Package/$(PKG_NAME)/install
+define Package/$(PKG_NAME)/description
 Nimbus One Utilities meant to be accessed by other packages
 endef
 
