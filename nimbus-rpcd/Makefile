@@ -28,7 +28,7 @@ define Package/$(PKG_NAME)/install
 	#make libexec folder
 	$(INSTALL_DIR) $(1)/usr/libexec/rpcd
 	#add bash scripts
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/rpcd/* $(1)/usr/libexec/rpcd/.
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/rpcd/nimbus-rpcd.sh $(1)/usr/libexec/rpcd/.
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
