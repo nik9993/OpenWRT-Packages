@@ -24,15 +24,23 @@ define Package/$(PKG_NAME)/description
 Nimbus One Service that manages execution flow
 endef
 
+define Build/Prepare
+	mkdir -p $(PKG_BUILD_DIR)
+	$(CP) ./src/* $(PKG_BUILD_DIR)
+endef
+
+define Build/Configure
+endef
+
+define Build/Compile
+	$(MAKE) -C $(PKG_BUILD_DIR) $(TARGET_CONFIGURE_OPTS)
+endef
+
 define Package/$(PKG_NAME)/install
-	#make nimbus folder
-	$(INSTALL_DIR) $(1)/etc/init.d
-	#install binary
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/lib.sh $(1)/usr/lib/nimbus/
-#    $(INSTALL_DIR) $(1)/etc/init.d
-#    $(INSTALL_BIN) ./files/rpcd.init $(1)/etc/init.d/rpcd
-#    $(INSTALL_DIR) $(1)/sbin
-#    $(INSTALL_BIN) $(PKG_BUILD_DIR)/rpcd $(1)/sbin/rpcd
+	$(INSTALL_DIR) $(1)/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/nimbus-one $(1)/bin/
+    $(INSTALL_DIR) $(1)/etc/init.d
+    $(INSTALL_BIN) $(PKG_BUILD_DIR)/nimbus $(1)/etc/init.d/nimbus
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
