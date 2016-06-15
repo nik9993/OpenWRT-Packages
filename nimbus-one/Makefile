@@ -39,8 +39,8 @@ endef
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/nimbus-one $(1)/bin/
-    $(INSTALL_DIR) $(1)/etc/init.d
-    $(INSTALL_BIN) $(PKG_BUILD_DIR)/nimbus $(1)/etc/init.d/nimbus
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/nimbus $(1)/etc/init.d/nimbus
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
